@@ -5,12 +5,10 @@ const reverseString = function(inputString) {
     while (true) {
         if (iterations < 0) {
             return newString;
-            break;
         }
         newString += characterArray[iterations - 1];
         iterations--;
     }
-
 }
 
 module.exports = reverseString
