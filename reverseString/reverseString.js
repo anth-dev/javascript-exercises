@@ -1,10 +1,16 @@
 const reverseString = function(inputString) {
     let characterArray = inputString.split('');
     let iterations = characterArray.length;
-    while (iterations < 0) {
-        
+    let newString;
+    while (true) {
+        if (iterations < 0) {
+            return newString;
+            break;
+        }
+        newString += characterArray[iterations - 1];
+        iterations--;
     }
-    return characterArray + iterations;
+
 }
 
 module.exports = reverseString
