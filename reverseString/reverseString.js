@@ -1,7 +1,7 @@
 const reverseString = function(inputString) {
     let characterArray = inputString.split('');
     let iterations = characterArray.length;
-    let newString;
+    let newString = '';
     while (true) {
         if (iterations < 0) {
             return newString;
