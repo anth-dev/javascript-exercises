@@ -1,14 +1,8 @@
 const reverseString = function(inputString) {
     let characterArray = inputString.split('');
-    let iterations = characterArray.length;
-    let newString = '';
-    while (true) {
-        if (iterations < 0) {
-            return newString;
-        }
-        newString += characterArray[iterations - 1];
-        iterations--;
-    }
+    let reversedArray = characterArray.reverse();
+    let newString = reversedArray.join('');
+    return newString;
 }
 
 module.exports = reverseString
