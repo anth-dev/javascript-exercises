@@ -3,7 +3,10 @@
 
 const removeFromArray = function(numberArray, ...itemsToRemove) {
     let toRemove = Array.from(itemsToRemove);
-    return toRemove;
+    let arrayLocation = numberArray.indexOf(itemsToRemove);
+    console.log(numberArray);
+    console.log(itemsToRemove);
+    console.log(arrayLocation);
 }
 
 module.exports = removeFromArray
