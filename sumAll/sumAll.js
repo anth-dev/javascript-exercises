@@ -2,8 +2,12 @@
 
 const sumAll = function(firstNumber, secondNumber) {
     mySum = 0;
+    if (firstNumber > secondNumber) {
+        for (i = firstNumber; i >= secondNumber; i--) {
+            mySum += i;
+        }
+    }
     for (i = secondNumber; i >= firstNumber; i--) {
-        console.log('i = ' + i);
         mySum += i;
     }
     return mySum;
