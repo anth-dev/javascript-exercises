@@ -6,8 +6,12 @@ function subtract (minuend, subtrahend) {
 	return minuend - subtrahend;
 }
 
-function sum () {
-	
+function sum (array) {
+	let sum = 0;
+	array.forEach(number => {
+		sum += number;
+	});
+	return sum;
 }
 
 function multiply () {
