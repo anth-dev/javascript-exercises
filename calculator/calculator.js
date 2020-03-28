@@ -2,8 +2,8 @@ function add (addend1, addend2) {
 	return addend1 + addend2;
 }
 
-function subtract () {
-	
+function subtract (minuend, subtrahend) {
+	return minuend - subtrahend;
 }
 
 function sum () {
