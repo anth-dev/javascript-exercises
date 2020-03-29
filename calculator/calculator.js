@@ -14,8 +14,13 @@ function sum (array) {
 	return sum;
 }
 
-function multiply () {
-	
+function multiply (array) {
+	let product = 1;
+	for (i = 0; i < array.length; i++) {
+		console.log('iterating over item ' + i )
+		product = product * array[i];
+	}
+	return product;
 }
 
 function power() {
