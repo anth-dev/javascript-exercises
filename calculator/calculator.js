@@ -23,8 +23,12 @@ function multiply (array) {
 	return product;
 }
 
-function power() {
-	
+function power(number, exponent) {
+	let product = 1;
+	for (i = 0; i < exponent; i++) {
+		product = product * number;
+	}
+	return product;
 }
 
 function factorial() {
