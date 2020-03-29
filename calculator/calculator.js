@@ -31,8 +31,18 @@ function power(number, exponent) {
 	return product;
 }
 
-function factorial() {
-	
+function factorial(number) {
+	if (number == 0) {
+		return 1;
+	}
+	let numberSentence = '';
+	for (i = number; i > 0; i--) {
+		if (i == 1) {
+			numberSentence += `${i}`;
+			return eval(numberSentence);
+		}
+		numberSentence += `${i} * `;
+	}
 }
 
 module.exports = {
