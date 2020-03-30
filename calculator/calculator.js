@@ -16,7 +16,7 @@ function sum (array) {
 
 function multiply (array) {
 	let product = 1;
-	for (i = 0; i < array.length; i++) {
+	for (let i = 0; i < array.length; i++) {
 		console.log('iterating over item ' + i )
 		product = product * array[i];
 	}
@@ -25,7 +25,7 @@ function multiply (array) {
 
 function power(number, exponent) {
 	let product = 1;
-	for (i = 0; i < exponent; i++) {
+	for (let i = 0; i < exponent; i++) {
 		product = product * number;
 	}
 	return product;
@@ -36,7 +36,7 @@ function factorial(number) {
 		return 1;
 	}
 	let numberSentence = '';
-	for (i = number; i > 0; i--) {
+	for (let i = number; i > 0; i--) {
 		if (i == 1) {
 			numberSentence += `${i}`;
 			return eval(numberSentence);
