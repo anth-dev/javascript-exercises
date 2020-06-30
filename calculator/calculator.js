@@ -31,19 +31,32 @@ function power(number, exponent) {
 	return product;
 }
 
+// this one passes tests but not really coded as intended
+// function factorial(number) {
+// 	if (number == 0) {
+// 		return 1;
+// 	}
+// 	let numberSentence = '';
+// 	for (let i = number; i > 0; i--) {
+// 		if (i == 1) {
+// 			numberSentence += `${i}`;
+// 			return eval(numberSentence);
+// 		}
+// 		numberSentence += `${i} * `;
+// 	}
+// }
+
 function factorial(number) {
+	let product = 1;
 	if (number == 0) {
-		return 1;
-	}
-	let numberSentence = '';
-	for (let i = number; i > 0; i--) {
-		if (i == 1) {
-			numberSentence += `${i}`;
-			return eval(numberSentence);
+		return product;
+	} else {
+		for (let i = number; i > 0; i--) {
+			product = i * product;
 		}
-		numberSentence += `${i} * `;
+		return product;
 	}
-}
+}	
 
 module.exports = {
 	add,
