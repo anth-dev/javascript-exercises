@@ -9,16 +9,14 @@ const caesar = function(string, shift) {
     let stringArray = [...string];
     
     // get the position of each item in stringArray in alphabet
-    for (i = 0; i <= stringArray.length; i++) {
+    for (i = 0; i < stringArray.length; i++) {
         let position = alphabet.indexOf(stringArray[i]);
-        return position;
         // take found position and add shift to find character to add to encryptedString
+        encryptedString.push(alphabet[position + shift]);
     }
 
-    // use alphabet array to find shifted characters and reapply case
-
     // return encrypted string
-
+    return encryptedString.join('');
 }
 
 module.exports = caesar
