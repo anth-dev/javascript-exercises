@@ -1,6 +1,6 @@
 const caesar = function(string, shift) {
     // array containing alphabet
-    let alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+    let alphabet = ['A', 'a', 'B', 'b', 'C', 'c', 'D', 'd', 'E', 'e', 'F', 'f', 'G', 'g', 'H', 'h', 'I', 'i', 'J', 'j', 'K', 'k', 'L', 'l', 'M', 'm', 'N', 'n', 'O', 'o', 'P', 'p', 'Q', 'q', 'R', 'r', 'S', 's', 'T', 't', 'U', 'u', 'V', 'v', 'W', 'w', 'X', 'x', 'Y', 'y', 'Z', 'z'];
 
     // blank array to build new string
     let encryptedString = [];
@@ -12,7 +12,8 @@ const caesar = function(string, shift) {
     for (i = 0; i < stringArray.length; i++) {
         let position = alphabet.indexOf(stringArray[i]);
         // take found position and add shift to find character to add to encryptedString
-        encryptedString.push(alphabet[position + shift]);
+        encryptedString.push(alphabet[position + shift * 2]);
+        console.log(encryptedString);
     }
 
     // return encrypted string
