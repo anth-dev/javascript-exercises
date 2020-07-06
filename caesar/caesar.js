@@ -1,6 +1,6 @@
 const caesar = function(string, shift) {
     // array containing alphabet
-    let alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+    let alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
 
     // blank array to build new string
     let encryptedString = [];
@@ -8,7 +8,12 @@ const caesar = function(string, shift) {
     // break string into characters
     let stringArray = [...string];
     
-    // find character in array and determine lower or upper case
+    // get the position of each item in stringArray in alphabet
+    for (i = 0; i <= stringArray.length; i++) {
+        let position = alphabet.indexOf(stringArray[i]);
+        return position;
+        // take found position and add shift to find character to add to encryptedString
+    }
 
     // use alphabet array to find shifted characters and reapply case
 
