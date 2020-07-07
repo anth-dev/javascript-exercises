@@ -21,8 +21,13 @@ const caesar = function(string, shift) {
             }
             encryptedString.push(alphabet[position]);
         // make it loop backwards with negative shift
-        } else if (null) {
-            
+        } else if (position + shift * 2 < 0) {
+            console.log('going negative');
+            while (position + shift * 2 < 0) {
+                difference = 0 - position - shift * 2;
+                position = alphabet.length - difference;
+            }
+            encryptedString.push(alphabet[position]);
         } else {
             // check found position against length of alphabet array
             // take found position and add shift to find character to add to encryptedString
