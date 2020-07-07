@@ -12,13 +12,19 @@ const caesar = function(string, shift) {
     for (i = 0; i < stringArray.length; i++) {
         let position = alphabet.indexOf(stringArray[i]);
         // check if position returns -1, if so push item from stringArray to the encypted string
-        console.log(position)
         if (position == -1) {
             encryptedString.push(stringArray[i]);
+        } else if (position + shift * 2 > alphabet.length) {
+            // make it loop around the array
+            while (position + shift * 2 > alphabet.length) {
+                position = position + shift * 2 - alphabet.length;
+            }
+            encryptedString.push(alphabet[position]);
         } else {
-        // take found position and add shift to find character to add to encryptedString
-        encryptedString.push(alphabet[position + shift * 2]);
-        console.log(encryptedString);
+            // check found position against length of alphabet array
+            // take found position and add shift to find character to add to encryptedString
+            encryptedString.push(alphabet[position + shift * 2]);
+            console.log(encryptedString);
         }
     }
 
