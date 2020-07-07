@@ -15,11 +15,14 @@ const caesar = function(string, shift) {
         if (position == -1) {
             encryptedString.push(stringArray[i]);
         } else if (position + shift * 2 > alphabet.length) {
-            // make it loop around the array
+            // make it loop forwards with positive shift
             while (position + shift * 2 > alphabet.length) {
                 position = position + shift * 2 - alphabet.length;
             }
             encryptedString.push(alphabet[position]);
+        // make it loop backwards with negative shift
+        } else if (null) {
+            
         } else {
             // check found position against length of alphabet array
             // take found position and add shift to find character to add to encryptedString
