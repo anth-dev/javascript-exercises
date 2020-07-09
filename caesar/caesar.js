@@ -10,23 +10,19 @@ const caesar = function(string, shift) {
     let stringArray = [...string];
     
     // get the position of each item in stringArray in alphabet
-    for (i = 0; i < stringArray.length; i++) {
+    for (i = 0; i <= stringArray.length; i++) {
         let position = alphabet.indexOf(stringArray[i]);
         // check if position returns -1, if so push item from stringArray to the encypted string
         if (position == -1) {
             encryptedString.push(stringArray[i]);
         } else if (position + shift * 2 >= alphabet.length) {
             // make it loop forwards with positive shift
-            while (position + shift * 2 >= alphabet.length) {
-                position = position + shift * 2 - alphabet.length;
-            }
+            position = (position + shift * 2) % alphabet.length;
             encryptedString.push(alphabet[position]);
         // make it loop backwards with negative shift
         } else if (position + shift * 2 <= 0) {
-            while (position + shift * 2 <= 0) {
                 difference = 0 - position - shift * 2;
                 position = alphabet.length - difference;
-            }
             encryptedString.push(alphabet[position]);
         } else {
             // check found position against length of alphabet array
