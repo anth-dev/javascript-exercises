@@ -1,4 +1,7 @@
 const fibonacci = function(number) {
+    if (number < 0) {
+        return 'OOPS';
+    }
     let firstAddend = 1;
     let secondAddend = 1;
     let sum;
